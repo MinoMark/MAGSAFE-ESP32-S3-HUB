@@ -1,5 +1,6 @@
 # MAGSAFE ESP32-S3 HUB
 **Don't get up, just use this...**
+(Read bottom before reading BOM)
 
 ## About My Project
 
@@ -61,3 +62,12 @@ A full design of the parts (except some models impossible to source)
 | PCBA & PCBA | PCB | 1 | 149.00 | 149.00 | https://jlcpcb.com/?from=VGS&utm_source=google&utm_medium=cpc&utm_campaign=14177189905&gad_source=1&gad_campaignid=14177189905&gbraid=0AAAAABS1Qql1GOgRJWfW55GGh4BVLQ-kr&gclid=CjwKCAiA2MDXBhBUEiwAD-YB-_knJwTwOTv6-qw0cwhvcRU1fMAk8eRsxDyDG89k4pFLfxfHsxuqEBoCV9sQAvD_BwE | JLCONE | Grant | It says in the photo its $150 AUD, but im buying from us so its ok. | 28 | N/A | N/A | N/A | no | N/A | N/A |
 | **Total** | | | | **202.0442** | | | | | | | | | | | |
 | **Grant total** | | | | **194.3742** | | | | | | | | | | | |
+
+# IMPORTANT READ BELOW
+
+**Just to let you know:**
+
+The total for the PCB is $150 AUD, plus $25 AUD for the AliExpress modules, bringing the actual total to $175 AUD.
+You might notice the Bill of Materials (BOM) shows a total of around $200 AUD. This looks high because the BOM lists the individual prices of every single component. However, the PCB and PCBA prices already include the cost of these parts and their assembly.
+
+I included the individual parts in the list just to show the breakdown, but you do not need to buy them separately. Since they are already covered in the PCBA price, they will not be added to your final cost.
