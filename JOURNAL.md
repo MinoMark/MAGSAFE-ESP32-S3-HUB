@@ -3,7 +3,7 @@ title: "Custom ESP32-S3 hub with MAGSAFE!"
 github: "https://github.com/MinoMark/MAGSAFE-ESP-32S3-HUB"
 description: "I'm using an ESP32-S3-WROOM-1U-N16R8 with MAGSAFE to create a hub to control varius things around the house, or just a basic desk accessory, this project will have 1 speaker with an adapter from my custom pcb encasing to hold the amplifier and the speakers using simple Interfaces for the audio amplifier!\n\nA battery will be included as well, so there will be a 5v to 3.3v reduction circuirt (MAGSAFE causes this)."
 created_at: "2026-11-05"
-total_time: "12h 12m"
+total_time: "12h 42m"
 ---
 
 # November 5, 2026: Design the first schematic
@@ -90,3 +90,15 @@ This allowed me to save time and money waiting for it to get back in stock or fi
 ![](https://fabricate.hackclub-assets.com/09318462ed5b3bb90eee9554612aeb8a73fd9b0e51c5007a1ee1e994ee4115d4/image-png/Screenshot%202026-11-08%20202822.png)
 
 **Total time spent: 42m**
+
+# November 9, 2026: Created and finished my REPO
+<!-- fabricate:entry 2536 -->
+
+Today I created and finished my repository. I was struggling a lot with how to add files into my repository so I searched online and used forums to try to figure it out. I ended up installing Git and running commands to commit and push an update to my repository.
+
+This allowed me to finally update and regularly add new content into my repository while giving me the ability to add files whenever I want.
+
+![](https://fabricate.hackclub-assets.com/f8afa1353c59282fded6546521d9f0aeaca4c1496fd12c0aadb4503e81a3d01e/image-png/Screenshot%202026-11-10%20162832.png)
+![](https://fabricate.hackclub-assets.com/363b2ac1f36615fe5bfb2b6bd316cbfdeb32a892b3119fea63c650e525adbfa2/image-png/Screenshot%202026-11-10%20162837.png)
+
+**Total time spent: 30m**
