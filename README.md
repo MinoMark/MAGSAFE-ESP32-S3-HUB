@@ -1,5 +1,6 @@
 # MAGSAFE ESP32-S3 HUB
 **Don't get up, just use this...**
+
 (Read bottom before reading BOM)
 
 ## About My Project
