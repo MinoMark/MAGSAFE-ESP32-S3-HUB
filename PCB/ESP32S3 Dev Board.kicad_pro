@@ -578,7 +578,7 @@
       "netlist": "./",
       "plot": "GBR/",
       "specctra_dsn": "",
-      "step": "",
+      "step": "ESP32S3 Dev Board.step",
       "vrml": ""
     },
     "page_layout_descr_file": ""
