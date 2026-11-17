@@ -15,54 +15,68 @@ Plug it into the dedicated USB-C port at the bottom side with a USB-C cable or a
 
 ## Schematics
 The schematics of my final design, what I'll be using to make the main PCB.
-![schematic1](<PCB/RENDERS/Schematic 1.png>) 
-![schematic2](<PCB/RENDERS/Schematic 2.png>) 
+
+N/A
 
 ## PCB
 The fully routed PCB, with fun easter egg and smart eletrical wiring choices that save money and change the path of electricity more efficiently.
-![CAD2](<PCB/RENDERS/ESP32-S3 Devboard Hub-PCB.png>) 
-![CAD2](<PCB/RENDERS/ESP32-S3 Devboard Hub-PCB2.png>) 
+
+N/A
 
 ## CAD
 A full design of the parts (except some models impossible to source)
-![CAD1](<PCB/RENDERS/Devboard(top view).png>) 
-![CAD2](<PCB/RENDERS/Devboard(side view).png>) 
-![CAD2](<PCB/RENDERS/Devboard(aerial).png>)
+
+N/A
 
 ## BOM
 
-| Part | Type | Quantity | Unit price (AUD) | Line total (AUD) | Link | Vendor | Funding | Notes | Index | LCSC# | MPN | Package | RoHS | MOQ | Multiple |
-|---|---|---:|---:|---:|---|---|---|---|---:|---|---|---|---|---:|---:|
-| 0Ω ±1% 62.5mW 0402 Thick Film Resistor | Part | 4 | 0.0011 | 0.0044 | https://www.lcsc.com/product-detail/C17168.html | UNI-ROYAL | Grant | This is min you can buy | 1 | C17168 | 0402WGF0000TCE | 0402 | yes | 100 | 100 |
-| Crystal 32.768kHz ±20ppm 6pF 55kΩ SMD3215-2P | Part | 2 | 0.6046 | 0.60 | https://www.lcsc.com/product-detail/C1985240.html | ABRACON | Grant | This is min you can buy | 2 | C1985240 | ABS07-120-32.768KHZ-T | SMD3215-2P | yes | 1 | 1 |
-| 3.3V Positive Fixed SOT-89-5 Voltage Regulators - Linear, Low Drop Out (LDO) Regulators RoHS | Part | 2 | 0.5913 | 0.59 | https://www.lcsc.com/product-detail/C460397.html | DIODES | Grant | This is min you can buy | 3 | C460397 | AP7361C-33Y5-13 | SOT-89-5 | yes | 1 | 1 |
-| 14VC Clamp 5.5A Ipp ESD DIODE SOT-666-6 | Part | 2 | 0.1571 | 0.79 | https://www.lcsc.com/product-detail/C2827693.html | TECH PUBLIC | Grant | This is min you can buy | 4 | C2827693 | USBLC6-2P6 | SOT-666-6 | yes | 5 | 5 |
-| Tactile Switch SPST 250gf 2.5mm Gull Wing 6.1mm x 3.7mm Surface Mount | Part | 4 | 0.0415 | 0.42 | https://www.lcsc.com/product-detail/C255802.html | HYP | Grant | This is min you can buy | 5 | C255802 | 1TS002E-2500-2501-CT | SMD,6x3.7mm | yes | 10 | 10 |
-| 22Ω ±1% 62.5mW 0402 Thick Film Resistor | Part | 4 | 0.0019 | 0.0076 | https://www.lcsc.com/product-detail/C25092.html | UNI-ROYAL | Grant | This is min you can buy | 6 | C25092 | 0402WGF220JTCE | 0402 | yes | 100 | 100 |
-| 5.1kΩ ±1% 62.5mW 0402 Thick Film Resistor | Part | 4 | 0.0023 | 0.0092 | https://www.lcsc.com/product-detail/C25905.html | UNI-ROYAL | Grant | This is min you can buy | 7 | C25905 | 0402WGF5101TCE | 0402 | yes | 100 | 100 |
-| 100nF ±10% 50V Ceramic Capacitor X7R 0402 | Part | 2 | 0.009 | 0.018 | https://www.lcsc.com/product-detail/C307331.html | Samsung Electro-Mechanics | Grant | This is min you can buy | 8 | C307331 | CL05B104KB54PNC | 0402 | yes | 100 | 100 |
-| Pre-Biased Bipolar Transistor (BJT) 50V 100mA 150mW Surface Mount SOT-363 | Part | 2 | 0.0502 | 0.50 | https://www.lcsc.com/product-detail/C62892.html | JSCJ | Grant | This is min you can buy | 9 | C62892 | UMH3N | SOT-363 | yes | 10 | 10 |
-| 22Ω ±5% 62.5mW 0402 Thick Film Resistor | Part | 4 | 0.0017 | 0.0068 | https://www.lcsc.com/product-detail/C25152.html | UNI-ROYAL | Grant | This is min you can buy | 10 | C25152 | 0402WGJ0220TCE | 0402 | yes | 100 | 100 |
-| DIODES AP2112K-3.3TRG1 | Part | 4 | 0.1848 | 0.7392 | https://www.lcsc.com/product-detail/C51118.html?s_z=n_q_c51118&globalKeyword=c51118 | DIODES | Grant | This is min you can buy | 11 | C51118 | AP2112K-3.3TRG1 | SOT-25-5 | yes | 5 | 5 |
-| 2.4GHz ESP32-S3R8 -103.5dBm SMD,19.2x18mm RF Transceiver Modules and Modems RoHS | Part | 2 | 5.2355 | 5.24 | https://www.lcsc.com/product-detail/C3013946.html | ESPRESSIF | Grant | This is min you can buy | 12 | C3013946 | ESP32-S3-WROOM-1U-N16R8 | SMD,19.2x18mm | yes | 1 | 1 |
-| USB-C (USB TYPE-C) Receptacle Connector 16 Position Surface Mount | Part | 2 | 0.1736 | 0.87 | https://www.lcsc.com/product-detail/C165948.html | Korean Hroparts Elec | Grant | This is min you can buy | 13 | C165948 | TYPE-C-31-M-12 | SMD | yes | 5 | 5 |
-| 14.1VC Clamp 11.2A Ipp TVS DIODE SOD-523 | Part | 2 | 0.0487 | 0.49 | https://www.lcsc.com/product-detail/C61148.html | onsemi | Grant | This is min you can buy | 14 | C61148 | ESD5Z3.3T1G | SOD-523 | yes | 10 | 10 |
-| Red 625nm LED Indication - Discrete 2.3V 0603 | Part | 2 | 0.0036 | 0.0072 | https://www.lcsc.com/product-detail/C965799.html | XINGLIGHT | Grant | This is min you can buy | 15 | C965799 | XL-1608SURC-06 | 0603 | yes | 100 | 100 |
-| Diode Independent 40V 3A Surface Mount SMA(DO-214AC) | Part | 6 | 0.0337 | 0.67 | https://www.lcsc.com/product-detail/C8678.html | MDD(Microdiode Semiconductor) | Grant | This is min you can buy | 16 | C8678 | SS34 | SMA(DO-214AC) | yes | 20 | 20 |
-| 22uF ±20% 25V Ceramic Capacitor X5R 0805 | Part | 2 | 0.1852 | 3.70 | https://www.lcsc.com/product-detail/C45783.html | Samsung Electro-Mechanics | Grant | This is min you can buy | 17 | C45783 | CL21A226MAQNNNE | 0805 | yes | 20 | 20 |
-| 10uF ±20% 10V Ceramic Capacitor X5R 0402 | Part | 10 | 0.0304 | 1.82 | https://www.lcsc.com/product-detail/C315248.html | Samsung Electro-Mechanics | Grant | This is min you can buy | 18 | C315248 | CL05A106MP5NUNC | 0402 | yes | 20 | 20 |
-| 1uF ±10% 25V Ceramic Capacitor X5R 0402 | Part | 2 | 0.0059 | 0.0118 | https://www.lcsc.com/product-detail/C52923.html | Samsung Electro-Mechanics | Grant | This is min you can buy | 19 | C52923 | CL05A105KA5NQNC | 0402 | yes | 100 | 100 |
-| MAX98357A audio amplifier | Part | 1 | 3.01 | 3.01 | https://www.aliexpress.com/item/1005007003802663.html?spm=a2g0o.productlist.main.4.2bd23ce0doG6x8&aem_p4p_detail=202611050133081315319932123740002772996&algo_pvid=0ad6be40-46e3-4f00-9430-e9820924795f&algo_exp_id=0ad6be40-46e3-4f00-9430-e9820924795f-3&pdp_ext_f=%7B%22order%22%3A%223834%22%2C%22spu_best_type%22%3A%22price%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21AUD%212.99%212.84%21%21%2113.80%2113.11%21%402101ca9517938711880116699e0d41%2112000052658790894%21sea%21AU%212961347876%21X%211%210%21n_tag%3A-29919%3Bd%3A20f6a0d2%3Bm03_new_user%3A-29895%3BpisId%3A5000000220905999&curPageLogUid=gHNWoxg3Cup0&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005007003802663%7C_p_origin_prod%3A&search_p4p_id=202611050133081315319932123740002772996_1 | AliExpress | Grant | | 20 | N/A | N/A | 1PCS | yes | 1 | 1 |
-| Wireless charger receiver | Part | 1 | 4.26 | 4.26 | https://www.aliexpress.com/item/1005006917890401.html?spm=a2g0o.productlist.main.21.5befc5e30wHdxF&algo_pvid=c3f727d4-7764-4de2-9cfe-4073aea75173&algo_exp_id=c3f727d4-7764-4de2-9cfe-4073aea75173-18&pdp_ext_f=%7B%22order%22%3A%22260%22%2C%22spu_best_type%22%3A%22price%22%2C%22eval%22%3A%22price%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21AUD%213.98%213.49%21%21%212.75%212.41%21%402101d2e717938715347906588e0f1b%2112000038722150536%21sea%21AU%212961347876%21X%211%210%21n_tag%3A-29919%3Bd%3A20f6a0d2%3Bm03_new_user%3A-29895%3BpisId%3A5000000220770329&curPageLogUid=ptJgFovmIGzU&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005006917890401%7C_p_origin_prod%3A | AliExpress | Grant | | 21 | N/A | N/A | 5W | yes | 1 | 1 |
-| Battery management board | Part | 1 | 1.06 | 1.06 | https://www.aliexpress.com/item/1005013472412754.html?spm=a2g0o.productlist.main.9.7fb4e999hY7Rre&algo_pvid=98fe2f10-0cd6-416a-bbd2-9b577de21ebe&algo_exp_id=98fe2f10-0cd6-416a-bbd2-9b577de21ebe-8&pdp_ext_f=%7B%22order%22%3A%225%22%2C%22spu_best_type%22%3A%22price%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21AUD%212.45%210.97%21%21%2111.31%214.51%21%402101d33417938729376868658e0dc7%2112000061234386246%21sea%21AU%212961347876%21X%211%210%21n_tag%3A-29919%3Bd%3A20f6a0d2%3Bm03_new_user%3A-29895%3BpisId%3A5000000220868114&curPageLogUid=SZ1nXcZwQJOj&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005013472412754%7C_p_origin_prod%3A | AliExpress | Grant | | 22 | N/A | N/A | 1X-Type C | yes | 1 | 1 |
-| 955565 3.7V 5000mAh Polymer Lithium Battery | Part | 1 | 12.47 | 12.47 | https://www.aliexpress.com/item/1005013156740117.html?spm=a2g0o.productlist.main.2.398348ee8Gn6zi&algo_pvid=f6f2868e-1781-4497-a01c-ee345d06bc3b&algo_exp_id=f6f2868e-1781-4497-a01c-ee345d06bc3b-1&pdp_ext_f=%7B%22order%22%3A%222%22%2C%22spu_best_type%22%3A%22price%22%2C%22eval%22%3A%22price%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21AUD%2120.14%2112.69%21%21%2192.85%2158.50%21%4021030f8317938734351546746e0d36%2112000060361345573%21sea%21AU%212961347876%21X%211%210%21n_tag%3A-29919%3Bd%3A20f6a0d2%3Bm03_new_user%3A-29895 | AliExpress | Grant | | 23 | N/A | N/A | 955565 1PCS | yes | 1 | 1 |
-| Speaker | Part | 1 | 2.54 | 2.54 | https://www.aliexpress.com/item/1005007640238935.html?spm=a2g0o.detail.pcDetailTopMoreOtherSeller.4.6cacshuCshuCnA&gps-id=pcDetailTopMoreOtherSeller&scm=1007.40050.354490.0&scm_id=1007.40050.354490.0&scm-url=1007.40050.354490.0&pvid=b61e8163-83fe-4c95-9dc5-7b9f26661546&_t=gps-id%3ApcDetailTopMoreOtherSeller%2Cscm-url%3A1007.40050.354490.0%2Cpvid%3Ab61e8163-83fe-4c95-9dc5-7b9f26661546%2Ctpp_buckets%3A668%232846%238110%231995&pdp_ext_f=%7B%22order%22%3A%222631%22%2C%22eval%22%3A%221%22%2C%22sceneId%22%3A%2230050%22%2C%22fromPage%22%3A%22recommend%22%7D&pdp_npi=6%40dis%21AUD%214.06%213.69%21%21%2118.49%2116.82%21%402103117b17940474651706506e0d0b%2112000041608234950%21rec%21AU%212961347876%21XZ%211%210%21n_tag%3A-29919%3Bd%3A20f6a0d2%3Bm03_new_user%3A-29895%3BpisId%3A5000000220905999&utparam-url=scene%3ApcDetailTopMoreOtherSeller%7Cquery_from%3A%7Cx_object_id%3A1005007640238935%7C_p_origin_prod%3A | AliExpress | Grant | | 24 | N/A | N/A | 2535 4 ohm 3W | yes | 1 | 1 |
-| 2.8" Touch LCD Screen | Part | 1 | 7.67 | 7.67 | https://www.aliexpress.com/item/1005008556130457.html?spm=a2g0o.detail.pcDetailTopMoreOtherSeller.12.6cacshuCshuCnA&gps-id=pcDetailTopMoreOtherSeller&scm=1007.40050.354490.0&scm_id=1007.40050.354490.0&scm-url=1007.40050.354490.0&pvid=b61e8163-83fe-4c95-9dc5-7b9f26661546&_t=gps-id%3ApcDetailTopMoreOtherSeller%2Cscm-url%3A1007.40050.354490.0%2Cpvid%3Ab61e8163-83fe-4c95-9dc5-7b9f26661546%2Ctpp_buckets%3A668%232846%238110%231995&pdp_ext_f=%7B%22order%22%3A%222115%22%2C%22spu_best_type%22%3A%22price%22%2C%22eval%22%3A%221%22%2C%22sceneId%22%3A%2230050%22%2C%22fromPage%22%3A%22recommend%22%7D&pdp_npi=6%40dis%21AUD%2135.60%2131.55%21%21%21162.02%21143.60%21%402103117b17940474651706506e0d0b%2112000045695652679%21rec%21AU%212961347876%21XZ%211%210%21n_tag%3A-29919%3Bd%3A20f6a0d2%3Bm03_new_user%3A-29895%3BpisId%3A5000000221234826&utparam-url=scene%3ApcDetailTopMoreOtherSeller%7Cquery_from%3A%7Cx_object_id%3A1005008556130457%7C_p_origin_prod%3A | AliExpress | Already own | | 25 | N/A | N/A | 2.8 Inch LCD | yes | 1 | 1 |
-| AliExpress Shipping (Australia) | Shipping | 1 | 3.02 | 3.02 | https://www.aliexpress.com/?src=google&albch=fbrnd&acnt=347-178-5672&isdl=y&aff_short_key=UneMJZVf&albcp=22321354204&albag=178985906351&slnk=&trgt=kwd-14802285088&plac=&crea=737351379802&netw=g&device=c&mtctp=e&memo1=&albbt=Google_7_fbrnd&aff_platform=google&albagn=888888&isSmbActive=false&isSmbAutoCall=false&needSmbHouyi=false&gad_source=1&gad_campaignid=22321354204&gbraid=0AAAAAD1qHibUcQdrYeOuuBWuvApxTQOP2&gclid=CjwKCAiAtbvXBhB_EiwAjwv9Jjyvq29gqiMRapaex5iaRvapHnvC2KuxCO2ai3P2B7r6hRykpAxdUhoCgLwQAvD_BwE | AliExpress | Grant | | 26 | N/A | N/A | N/A | N/A | N/A | N/A |
-| AliExpress tax | Tax or fee | 1 | 2.52 | 2.52 | https://www.aliexpress.com/?src=google&albch=fbrnd&acnt=347-178-5672&isdl=y&aff_short_key=UneMJZVf&albcp=22321354204&albag=178985906351&slnk=&trgt=kwd-14802285088&plac=&crea=737351379802&netw=g&device=c&mtctp=e&memo1=&albbt=Google_7_fbrnd&aff_platform=google&albagn=888888&isSmbActive=false&isSmbAutoCall=false&needSmbHouyi=false&gad_source=1&gad_campaignid=22321354204&gbraid=0AAAAAD1qHibUcQdrYeOuuBWuvApxTQOP2&gclid=CjwKCAiAtbvXBhB_EiwAjwv9Jjyvq29gqiMRapaex5iaRvapHnvC2KuxCO2ai3P2B7r6hRykpAxdUhoCgLwQAvD_BwE | AliExpress | Grant | | 27 | N/A | N/A | N/A | N/A | N/A | N/A |
-| PCBA & PCBA | PCB | 1 | 149.00 | 149.00 | https://jlcpcb.com/?from=VGS&utm_source=google&utm_medium=cpc&utm_campaign=14177189905&gad_source=1&gad_campaignid=14177189905&gbraid=0AAAAABS1Qql1GOgRJWfW55GGh4BVLQ-kr&gclid=CjwKCAiA2MDXBhBUEiwAD-YB-_knJwTwOTv6-qw0cwhvcRU1fMAk8eRsxDyDG89k4pFLfxfHsxuqEBoCV9sQAvD_BwE | JLCONE | Grant | It says in the photo its $150 AUD, but im buying from us so its ok. | 28 | N/A | N/A | N/A | no | N/A | N/A |
-| **Total** | | | | **202.0442** | | | | | | | | | | | |
-| **Grant total** | | | | **194.3742** | | | | | | | | | | | |
+# Bill of Materials (BOM)
+
+| Part | Type | Quantity | Unit Price (USD) | Line Total (USD) | Link | Vendor | Funding | Notes | Reference | Footprint | Datasheet | MPN | LCSC |
+|---|---|---:|---:|---:|---|---|---|---|---|---|---|---|---|
+| Conn_01x01_Pin | Part | 6 | 0.00 | 0.00 | N/A | — | Grant | N/A | J7, J8, J9 | Connector_Wire:SolderWirePad_1x01_SMD_1.5x3mm | — | N/A | N/A |
+| 0402, 1k | Part | 2 | 0.0013 | 0.0026 | [Datasheet](https://www.lcsc.com/datasheet/C11702.pdf) | — | Grant | — | R7 | Resistor_SMD:R_0402_1005Metric | [PDF](https://www.lcsc.com/datasheet/C11702.pdf) | 0402WGF1001TCE | C11702 |
+| 0402, 22 | Part | 4 | 0.001 | 0.004 | [Datasheet](https://www.lcsc.com/datasheet/C25092.pdf) | — | Grant | — | R13, R14 | Resistor_SMD:R_0402_1005Metric | [PDF](https://www.lcsc.com/datasheet/C25092.pdf) | 0402WGF220JTCE | C25092 |
+| 0 | Part | 4 | 0.0012 | 0.0048 | [Datasheet](https://www.lcsc.com/datasheet/C17168.pdf) | — | Grant | — | R10, R15 | Resistor_SMD:R_0402_1005Metric | [PDF](https://www.lcsc.com/datasheet/C17168.pdf) | 0402WGF0000TCE | C17168 |
+| 0402, 5.1k | Part | 4 | 0.0014 | 0.0056 | [Datasheet](https://www.lcsc.com/datasheet/C25905.pdf) | — | Grant | — | R5, R6 | Resistor_SMD:R_0402_1005Metric | [PDF](https://www.lcsc.com/datasheet/C25905.pdf) | 0402WGF5101TCE | C25905 |
+| 0402, 10k | Part | 4 | 0.0016 | 0.0064 | [Datasheet](https://www.lcsc.com/datasheet/C2765610.pdf) | — | Grant | — | R11, R12 | Resistor_SMD:R_0402_1005Metric | [PDF](https://www.lcsc.com/datasheet/C2765610.pdf) | CQ02WGF1002TCE | C2765610 |
+| 22 | Part | 4 | 0.0017 | 0.0068 | [Datasheet](https://www.lcsc.com/datasheet/C25152.pdf) | — | Grant | — | R8, R9 | Resistor_SMD:R_0402_1005Metric | [PDF](https://www.lcsc.com/datasheet/C25152.pdf) | 0402WGJ0220TCE | C25152 |
+| LED | Part | 2 | 0.0036 | 0.0072 | [Datasheet](https://www.lcsc.com/datasheet/C965799.pdf) | — | Grant | — | D2 | LED_SMD:LED_0603_1608Metric | [PDF](https://www.lcsc.com/datasheet/C965799.pdf) | XL-1608SURC-06 | C965799 |
+| 6.8pF | Part | 4 | 0.0023 | 0.0092 | [Datasheet](https://www.lcsc.com/datasheet/C1576.pdf) | — | Grant | — | C19, C20 | Capacitor_SMD:C_0402_1005Metric | [PDF](https://www.lcsc.com/datasheet/C1576.pdf) | 0402CG6R8C500NT | C1576 |
+| 100nF, 16V, X7R | Part | 10 | 0.0024 | 0.024 | [Datasheet](https://www.lcsc.com/datasheet/C1525.pdf) | — | Grant | — | C1, C6, C7, C13, C16 | Capacitor_SMD:C_0402_1005Metric | [PDF](https://www.lcsc.com/datasheet/C1525.pdf) | CL05B104KO5NNNC | C1525 |
+| 1uF | Part | 6 | 0.0057 | 0.0342 | [Datasheet](https://www.lcsc.com/datasheet/C52923.pdf) | — | Grant | — | C9, C12, C18 | Capacitor_SMD:C_0402_1005Metric | [PDF](https://www.lcsc.com/datasheet/C52923.pdf) | CL05A105KA5NQNC | C52923 |
+| Conn_01x02_Pin | Part | 2 | 0.0184 | 0.0368 | [Datasheet](https://www.lcsc.com/datasheet/C492401.pdf) | — | Grant | — | J1 | Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical | [PDF](https://www.lcsc.com/datasheet/C492401.pdf) | PZ254V-11-02P | C492401 |
+| ESD5Z3.3T1G | Part | 2 | 0.038 | 0.076 | [Datasheet](https://www.lcsc.com/datasheet/C61148.pdf) | — | Grant | — | D9 | Diode_SMD:D_SOD-523 | [PDF](https://www.lcsc.com/datasheet/C61148.pdf) | ESD5Z3.3T1G | C61148 |
+| Conn_01x07_Pin | Part | 2 | 0.0444 | 0.0888 | [Datasheet](https://www.lcsc.com/datasheet/C492406.pdf) | — | Grant | — | J3 | Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Vertical | [PDF](https://www.lcsc.com/datasheet/C492406.pdf) | PZ254V-11-07P | C492406 |
+| UMH3N | Part | 2 | 0.0502 | 0.1004 | [Datasheet](https://www.lcsc.com/datasheet/C62892.pdf) | — | Grant | — | Q1 | Package_TO_SOT_SMD:SOT-363_SC-70-6 | [PDF](https://www.lcsc.com/datasheet/C62892.pdf) | UMH3N | C62892 |
+| SW_Push | Part | 4 | 0.0461 | 0.1844 | [Datasheet](https://www.lcsc.com/datasheet/C255802.pdf) | — | Grant | — | SW1, SW2 | Button_Switch_SMD:SW_SPST_CK_RS282G05A3 | [PDF](https://www.lcsc.com/datasheet/C255802.pdf) | 1TS002E-2500-2501-CT | C255802 |
+| Conn_01x14_Pin | Part | 2 | 0.0927 | 0.1854 | [Datasheet](https://www.lcsc.com/datasheet/C22465874.pdf) | — | Grant | — | J4 | Connector_PinHeader_2.54mm:PinHeader_1x14_P2.54mm_Vertical | [PDF](https://www.lcsc.com/datasheet/C22465874.pdf) | PZ254V-11-14P | C22465874 |
+| SS34 | Part | 6 | 0.0354 | 0.2124 | [Datasheet](https://www.lcsc.com/datasheet/C8678.pdf) | — | Grant | — | D1, D3, D4 | Diode_SMD:D_SMA | [PDF](https://www.lcsc.com/datasheet/C8678.pdf) | SS34 | C8678 |
+| 0805, 22uF, 25V, X5R | Part | 2 | 0.1093 | 0.2186 | [Datasheet](https://www.lcsc.com/datasheet/C45783.pdf) | — | Grant | — | C17 | Capacitor_SMD:C_0805_2012Metric | [PDF](https://www.lcsc.com/datasheet/C45783.pdf) | CL21A226MAQNNNE | C45783 |
+| USBLC6-2P6 | Part | 2 | 0.1572 | 0.3144 | [Datasheet](https://www.lcsc.com/datasheet/C2827693.pdf) | — | Grant | — | U2 | Package_TO_SOT_SMD:SOT-666 | [PDF](https://www.lcsc.com/datasheet/C2827693.pdf) | USBLC6-2P6 | C2827693 |
+| 10uF | Part | 6 | 0.0561 | 0.3366 | [Datasheet](https://www.lcsc.com/datasheet/C2846677.pdf) | — | Grant | — | C5, C8, C10 | Capacitor_SMD:C_0402_1005Metric | [PDF](https://www.lcsc.com/datasheet/C2846677.pdf) | 0402X106M100NT | C2846677 |
+| USB_C_Receptacle_USB2.0 | Part | 2 | 0.1888 | 0.3776 | [Datasheet](https://www.lcsc.com/datasheet/C165948.pdf) | — | Grant | — | E2 | Connector_USB:USB_C_Receptacle_HRO_TYPE-C-31-M-12 | [PDF](https://www.lcsc.com/datasheet/C165948.pdf) | TYPE-C-31-M-12 | C165948 |
+| AP2112K-3.3 | Part | 4 | 0.1683 | 0.6732 | [Datasheet](https://www.lcsc.com/datasheet/C51118.pdf) | — | Grant | — | U1, U3 | Package_TO_SOT_SMD:SOT-23-5 | [PDF](https://www.lcsc.com/datasheet/C51118.pdf) | AP2112K-3.3TRG1 | C51118 |
+| 32.768kHz | Part | 2 | 0.6128 | 1.2256 | [Datasheet](https://www.lcsc.com/datasheet/C1985240.pdf) | — | Grant | — | Y2 | Crystal:Crystal_SMD_3215-2Pin_3.2x1.5mm | [PDF](https://www.lcsc.com/datasheet/C1985240.pdf) | ABS07-120-32.768KHZ-T | C1985240 |
+| ESP32-S3-WROOM-1-N16R8 | Part | 2 | 5.3999 | 10.7998 | [Datasheet](https://www.lcsc.com/datasheet/C2913202.pdf) | — | Grant | — | U4 | RF_Module:ESP32-S3-WROOM-1 | [PDF](https://www.lcsc.com/datasheet/C2913202.pdf) | ESP32-S3-WROOM-1-N16R8 | C2913202 |
+| Shipping (JLCONE) | Shipping | 1 | 2.22 | 2.22 | [JLCPCB](https://jlcpcb.com/) | — | Grant | — | N/A | N/A | N/A | N/A | N/A |
+| Shipping (AliExpress) | Shipping | 1 | 2.03 | 2.03 | N/A | — | Grant | — | N/A | N/A | N/A | N/A | N/A |
+| Tax (AliExpress) | Tax or fee | 1 | 1.74 | 1.74 | N/A | — | Grant | — | N/A | N/A | N/A | N/A | N/A |
+| MAX98357A audio amplifier | Part | 1 | 2.07 | 2.07 | [AliExpress](https://www.aliexpress.com/item/1005007003802663.html) | — | Grant | — | MAX98357A | N/A | N/A | N/A | N/A |
+| Wireless charger receiver | Part | 1 | 2.92 | 2.92 | [AliExpress](https://www.aliexpress.com/item/1005006917890401.html) | — | Grant | — | 5W | N/A | N/A | N/A | N/A |
+| Battery management board | Part | 1 | 0.80 | 0.80 | [AliExpress](https://www.aliexpress.com/item/1005013472412754.html) | — | Grant | — | 1X-Type C | N/A | N/A | N/A | N/A |
+| 5000mAh 955565 Lipo Lithium Battery | Part | 1 | 8.55 | 8.55 | [AliExpress](https://www.aliexpress.com/item/1005012710344008.html) | — | Grant | — | 3.7 V | N/A | N/A | N/A | N/A |
+| 2W Speaker | Part | 1 | 2.60 | 2.60 | [AliExpress](https://www.aliexpress.com/item/1005007640238935.html) | — | Grant | — | 2535 4 ohm 3W | N/A | N/A | N/A | N/A |
+| 2.8" TFT Screen | Part | 1 | 7.60 | 7.60 | [AliExpress](https://www.aliexpress.com/item/1005008568072063.html) | — | Grant | Already own | 2.8 Inch Display | N/A | N/A | N/A | N/A |
+| PCBA | Tax or fee | 2 | 44.455 | 88.91 | [JLCPCB](https://jlcpcb.com/) | — | Grant | — | N/A | N/A | N/A | N/A | N/A |
+| PCB | Part | 5 | 0.592 | 2.96 | N/A | — | Grant | — | N/A | N/A | N/A | N/A | N/A |
+
+## Cost Summary
+
+| Description | Total (USD) |
+|---|---:|
+| Total | 137.3348 |
+| Grant total | 129.7348 |
 
 # IMPORTANT READ BELOW
 

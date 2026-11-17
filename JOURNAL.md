@@ -1,13 +1,12 @@
 ---
 title: "Custom ESP32-S3 hub with MAGSAFE!"
-github: "https://github.com/MinoMark/MAGSAFE-ESP-32S3-HUB"
+github: "https://github.com/MinoMark/MAGSAFE-ESP32-S3-HUB"
 description: "I'm using an ESP32-S3-WROOM-1U-N16R8 with MAGSAFE to create a hub to control varius things around the house, or just a basic desk accessory, this project will have 1 speaker with an adapter from my custom pcb encasing to hold the amplifier and the speakers using simple Interfaces for the audio amplifier!\n\nA battery will be included as well, so there will be a 5v to 3.3v reduction circuirt (MAGSAFE causes this)."
 created_at: "2026-11-05"
-total_time: "12h 42m"
+total_time: "15h 12m"
 ---
 
 # November 5, 2026: Design the first schematic
-<!-- fabricate:entry 2192 -->
 
 I'm on the first stage of making my project! So far I've worked on designing the schematic of the PCB. There were many difficult challenges I had to overcome, such as learning about power management for wireless. Because the wireless module I've looked into has a 5V output, and my microcontroller can only take 3.3V, I had to make a 3.3V regulator from scratch. I've learnt how to manage power usage in my project today; hopefully, I can use it for future projects or maybe later on!
 
@@ -21,8 +20,7 @@ I've made a parts list of what I may use when I make this. I've chosen things th
 
 **Total time spent: 4h**
 
-# November 5, 2026 (entry 2): Fixing power and MAGSAFE compatibility
-<!-- fabricate:entry 2253 -->
+# November 5, 2026: Fixing power and MAGSAFE compatibility
 
 Day 2 went well. I've worked on fixing some power compatibility issues with MagSafe. Let me explain the issues I had.
 
@@ -40,7 +38,6 @@ I'll add some models for 3 of the components later.
 **Total time spent: 3h 30m**
 
 # November 6, 2026: Adding my traces to the PCB
-<!-- fabricate:entry 2296 -->
 
 Today I did so much progress!
 
@@ -61,7 +58,6 @@ That's all for today!
 **Total time spent: 2h 30m**
 
 # November 7, 2026: Making BOM and final changes to PCB
-<!-- fabricate:entry 2381 -->
 
 I have made the BOM so far, with all the AliExpress modules I need for my project. Also, when calculating a price for the manufactured PCB, because my PCB was 6 layers, it cost almost 200% more than a standard 4-layer PCB.
 
@@ -76,7 +72,6 @@ This allowed me to save almost 500 dollars in production (yes, 6-layer PCBs do c
 **Total time spent: 1h 30m**
 
 # November 8, 2026: Money issues and small issues with PCB FIXED
-<!-- fabricate:entry 2389 -->
 
 After I made the change from a 6-layer PCB to a 4-layer PCB, I went back to JLCPCB and looked into the pricing and I found that it was way cheaper.
 
@@ -92,7 +87,6 @@ This allowed me to save time and money waiting for it to get back in stock or fi
 **Total time spent: 42m**
 
 # November 9, 2026: Created and finished my REPO
-<!-- fabricate:entry 2536 -->
 
 Today I created and finished my repository. I was struggling a lot with how to add files into my repository so I searched online and used forums to try to figure it out. I ended up installing Git and running commands to commit and push an update to my repository.
 
@@ -102,3 +96,20 @@ This allowed me to finally update and regularly add new content into my reposito
 ![](https://fabricate.hackclub-assets.com/363b2ac1f36615fe5bfb2b6bd316cbfdeb32a892b3119fea63c650e525adbfa2/image-png/Screenshot%202026-11-10%20162837.png)
 
 **Total time spent: 30m**
+
+# November 16, 2026: Fixed lots of issues on the PCB
+
+My last edition of my project got rejected, and this devlog is devoted to fixing those issues. First, I fixed the schematic a bit, making some more improvements for flow and stability.
+
+In the PCB editor, I added mounting holes and redid the entire PCB. I also changed the position of all the parts so they are actually being used.In the schematic editor, I changed the ESP so it has an inbuilt antenna.I have added the extra parts to the BOM, ensuring that it will all work correctly.
+
+Finally, I made the PCB two layers and sourced models for some of the missing parts.
+
+Will get some feedback from others later to see what I can fix.
+
+![](https://fabricate.hackclub-assets.com/830a9812c9cef49ec37ad2cfe3ae028f94fcd63bf1278b7a554ac5e462be6133/image-png/Screenshot%202026-11-17%20110840.png)
+![](https://fabricate.hackclub-assets.com/644e365716d637f6e9c4a85fd757311a9c0ace5a4a0abb605c15aa2d0c7e1aa3/image-png/Screenshot%202026-11-17%20110853.png)
+![](https://fabricate.hackclub-assets.com/f5e0c8edf6f5bc5b4b33efe944800eb14624bacb48d592bb241c15a071ef402e/image-png/Screenshot%202026-11-17%20111053.png)
+![](https://fabricate.hackclub-assets.com/1039c180cfc7f8c7bcae0bc36a4873f4d0c7ebd20c310b010b4a02f0fbfdd630/image-png/Screenshot%202026-11-17%20111107.png)
+
+**Total time spent: 2h 30m**
