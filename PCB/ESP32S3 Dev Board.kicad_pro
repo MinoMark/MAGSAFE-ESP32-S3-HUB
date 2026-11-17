@@ -589,7 +589,7 @@
       "method": 0,
       "sort_order": 0
     },
-    "bom_export_filename": "${PROJECTNAME}.csv",
+    "bom_export_filename": "..\\..\\..\\..\\..\\Downloads\\ESP32S3 Dev Board.csv",
     "bom_fmt_presets": [],
     "bom_fmt_settings": {
       "field_delimiter": ",",
@@ -623,34 +623,34 @@
           "show": true
         },
         {
-          "group_by": true,
+          "group_by": false,
           "label": "DNP",
           "name": "${DNP}",
-          "show": true
+          "show": false
         },
         {
-          "group_by": true,
+          "group_by": false,
           "label": "Exclude from BOM",
           "name": "${EXCLUDE_FROM_BOM}",
-          "show": true
+          "show": false
         },
         {
-          "group_by": true,
+          "group_by": false,
           "label": "Exclude from Board",
           "name": "${EXCLUDE_FROM_BOARD}",
-          "show": true
+          "show": false
         },
         {
-          "group_by": true,
+          "group_by": false,
           "label": "Exclude from Simulation",
           "name": "${EXCLUDE_FROM_SIM}",
-          "show": true
+          "show": false
         },
         {
-          "group_by": true,
+          "group_by": false,
           "label": "Exclude from Position Files",
           "name": "${EXCLUDE_FROM_POS_FILES}",
-          "show": true
+          "show": false
         },
         {
           "group_by": true,
@@ -672,20 +672,14 @@
         },
         {
           "group_by": false,
-          "label": "MPN",
-          "name": "MPN",
-          "show": false
-        },
-        {
-          "group_by": false,
           "label": "Manufacturer_Name",
           "name": "Manufacturer_Name",
           "show": false
         },
         {
           "group_by": true,
-          "label": "Manufacturer_Part_Number",
-          "name": "Manufacturer_Part_Number",
+          "label": "MPN",
+          "name": "MPN",
           "show": true
         },
         {
@@ -719,7 +713,7 @@
           "show": false
         },
         {
-          "group_by": false,
+          "group_by": true,
           "label": "LCSC",
           "name": "LCSC",
           "show": true
@@ -744,15 +738,21 @@
         },
         {
           "group_by": true,
-          "label": "Price",
-          "name": "Price",
+          "label": "Unit Price",
+          "name": "Unit Price",
           "show": true
         },
         {
           "group_by": true,
           "label": "link",
           "name": "link",
-          "show": false
+          "show": true
+        },
+        {
+          "group_by": true,
+          "label": "Line Total",
+          "name": "Line Total",
+          "show": true
         }
       ],
       "filter_string": "",
@@ -760,7 +760,7 @@
       "include_excluded_from_bom": true,
       "name": "",
       "sort_asc": true,
-      "sort_field": "Reference"
+      "sort_field": "Line Total"
     },
     "bus_aliases": {},
     "connection_grid_size": 50.0,
@@ -803,7 +803,7 @@
         "uuid": "50801038-c9eb-47a5-b248-5dd20448c4b5"
       }
     ],
-    "used_designators": "J1-9,#FLG3,#PWR5,#PWR11-17,#PWR19-22,#PWR30-32,D3-6,U1,U3,C5-8",
+    "used_designators": "#FLG3,J1-9,R8-10,R15-19,D3-6,#PWR5,#PWR11-17,#PWR19-22,#PWR30-36,#PWR39-42,U1,U3-5,C5-11,C14-15,Y2-3",
     "variants": []
   },
   "sheets": [
