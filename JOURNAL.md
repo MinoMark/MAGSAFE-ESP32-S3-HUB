@@ -1,9 +1,9 @@
 ---
 title: "Custom ESP32-S3 hub with MAGSAFE!"
 github: "https://github.com/MinoMark/MAGSAFE-ESP32-S3-HUB"
-description: "I'm using an ESP32-S3-WROOM-1U-N16R8 with MAGSAFE to create a hub to control varius things around the house, or just a basic desk accessory, this project will have 1 speaker with an adapter from my custom pcb encasing to hold the amplifier and the speakers using simple Interfaces for the audio amplifier!\n\nA battery will be included as well, so there will be a 5v to 3.3v reduction circuirt (MAGSAFE causes this)."
+description: "I'm using an ESP32-S3-WROOM-1-N16R8 with MAGSAFE to create a hub to control varius things around the house, or just a basic desk accessory, this project will have 1 speaker with an adapter from my custom pcb encasing to hold the amplifier and the speakers using simple Interfaces for the audio amplifier!\n\nA battery will be included as well, so there will be a 5v to 3.3v reduction circuirt (MAGSAFE causes this)."
 created_at: "2026-11-05"
-total_time: "15h 12m"
+total_time: "15h 54m"
 ---
 
 # November 5, 2026: Design the first schematic
@@ -113,3 +113,14 @@ Will get some feedback from others later to see what I can fix.
 ![](https://fabricate.hackclub-assets.com/1039c180cfc7f8c7bcae0bc36a4873f4d0c7ebd20c310b010b4a02f0fbfdd630/image-png/Screenshot%202026-11-17%20111107.png)
 
 **Total time spent: 2h 30m**
+
+# November 18, 2026: Small changes
+
+I've spent so long remaking the PCB and adding all the extra components, which is what I was working on before. Since then, I've made more changes to the PCB, making it cleaner and adding more detailed text.
+
+Next, I had to remake the whole BOM three times because the pricing was wrong, along with broken links and other issues. I also had to calculate the final prices, including shipping, while finding all the cheaper alternatives.
+
+![](https://fabricate.hackclub-assets.com/4691cccda68137e9629b092ef1adce03d67ddd9facf1791fc97ed8189743970f/image-png/Screenshot%202026-11-17%20210522.png)
+![](https://fabricate.hackclub-assets.com/69eddbcb3a6759891393da34a39b11c358016b70f33e1f78aa03e3ac14014ff0/image-png/Screenshot%202026-11-17%20210531.png)
+
+**Total time spent: 42m**

@@ -1,8 +1,6 @@
 # MAGSAFE ESP32-S3 HUB
 **Don't get up, just use this...**
 
-(Read bottom before reading BOM)
-
 ## About My Project
 
 What is my project? My project is one of a kind! I am using an ESP32-S3 microcontroller chip to power a smart 2.8" TFT touchscreen. As mentioned in the title, it is listed as being MagSafe compatible, which is ingenious, right? Who does not want to have it charging 24/7? Or maybe not? Well, that has been solved too! I have added a 3.7V 5000mAh LiPo battery that can last well over 24 hours. But that is not all! I have also included an audio amplifier with a super loud and crisp speaker so you can hear those alerts and alarms from meters away.
@@ -12,6 +10,10 @@ I’ve made this project because I am tired of opening my laptop just to have a 
 **How to use:**
 
 Plug it into the dedicated USB-C port at the bottom side with a USB-C cable or any compatible iPhone MagSafe charger. Let it charge for 10 minutes to an hour to fully charge. For MagSafe, let it charge for 30 minutes to an hour and 15 minutes.
+
+**Wiring:**
+
+
 
 ## Schematics
 The schematics of my final design, what I'll be using to make the main PCB.
@@ -67,12 +69,3 @@ N/A
 | SMT Stencil | Part | 1 | 7.18 | 7.18 | N/A | JLCPCB | Grant |  | N/A | N/A | N/A | N/A | N/A |
 | **Total** |  |  |  | **101.55** |  |  |  |  |  |  |  |  |  |
 | **Grant total** |  |  |  | **93.95** |  |  |  |  |  |  |  |  |  |
-
-# IMPORTANT READ BELOW
-
-**Just to let you know:**
-
-The total for the PCB is $150 AUD, plus $25 AUD for the AliExpress modules, bringing the actual total to $175 AUD.
-You might notice the Bill of Materials (BOM) shows a total of around $200 AUD. This looks high because the BOM lists the individual prices of every single component. However, the PCB and PCBA prices already include the cost of these parts and their assembly.
-
-I included the individual parts in the list just to show the breakdown, but you do not need to buy them separately. Since they are already covered in the PCBA price, they will not be added to the final cost.
