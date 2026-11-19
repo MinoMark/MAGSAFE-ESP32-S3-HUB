@@ -28,7 +28,7 @@ The fully routed PCB, with fun easter egg and smart eletrical wiring choices tha
 ![PCB Render](PCB/RENDERS/PCB2.png)
 
 ## CAD
-A full design of the parts (except some models impossible to source)
+A full design of the parts.
 
 ![PCB Render](CAD/RENDERS/CAD1.png)
 ![PCB Render](CAD/RENDERS/CAD2.png)
