@@ -11,14 +11,15 @@ I’ve made this project because I am tired of opening my laptop just to have a 
 
 Plug it into the dedicated USB-C port at the bottom side with a USB-C cable or any compatible iPhone MagSafe charger. Let it charge for 10 minutes to an hour to fully charge. For MagSafe, let it charge for 30 minutes to an hour and 15 minutes.
 
-**Wiring:**
+**Wiring Diagram:**
 
 
 
 ## Schematics
 The schematics of my final design, what I'll be using to make the main PCB.
 
-N/A
+![PCB Render](PCB/RENDERS/Schematic1.png)
+![PCB Render](PCB/RENDERS/Schematic2.png)
 
 ## PCB
 The fully routed PCB, with fun easter egg and smart eletrical wiring choices that save money and change the path of electricity more efficiently.
