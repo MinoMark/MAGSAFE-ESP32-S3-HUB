@@ -3,7 +3,7 @@ title: "Custom ESP32-S3 hub with MAGSAFE!"
 github: "https://github.com/MinoMark/MAGSAFE-ESP32-S3-HUB"
 description: "I'm using an ESP32-S3-WROOM-1-N16R8 with MAGSAFE to create a hub to control varius things around the house, or just a basic desk accessory, this project will have 1 speaker with an adapter from my custom pcb encasing to hold the amplifier and the speakers using simple Interfaces for the audio amplifier!\n\nA battery will be included as well, so there will be a 5v to 3.3v reduction circuirt (MAGSAFE causes this)."
 created_at: "2026-11-05"
-total_time: "15h 54m"
+total_time: "17h 54m"
 ---
 
 # November 5, 2026: Design the first schematic
@@ -124,3 +124,21 @@ Next, I had to remake the whole BOM three times because the pricing was wrong, a
 ![](https://fabricate.hackclub-assets.com/69eddbcb3a6759891393da34a39b11c358016b70f33e1f78aa03e3ac14014ff0/image-png/Screenshot%202026-11-17%20210531.png)
 
 **Total time spent: 42m**
+
+# November 19, 2026: Made everything on CAD
+
+I'm now starting to use Fusion 360 to design and build my models for EVERY module and PCB. I've added so much and learnt all there is to know about Fusion 360.
+
+I started by importing the STEP file from KiCad into Fusion 360, which then allowed me to build from there, copying the main board's size for the screen and iterating the rest for the other PCBs, like the audio amplifier.
+
+To get such accurate PCB replicas for the modules, I've used copies of the physical versions or looked at them online. I've learnt so much and could definitely improve as I work more on this project. The next devlog will for sure have the case and instructions, and after that, the code!
+
+As shown in the photos, it shows me making more and more changes to the PCB, adding modules as I go.
+
+![](https://fabricate.hackclub-assets.com/6e4ef5d6530cc42ea2dcb30581323bd4e1725376075ad0617bfd89c721105d49/image-png/Screenshot%202026-11-19%20182149.png)
+![](https://fabricate.hackclub-assets.com/3956556b579d56891443381057929de2db569a686cf1d5622af3f9390d187123/image-png/Screenshot%202026-11-19%20192059.png)
+![](https://fabricate.hackclub-assets.com/90469b638a2f3a9697652451bcee691d6253313c6bb3f564b2838d7732b0700d/image-png/Screenshot%202026-11-19%20195105.png)
+![](https://fabricate.hackclub-assets.com/f408fa70e997ead7942c3cdf90178159097d8a7d3dc7ad4080d20d38f0c699d1/image-png/Screenshot%202026-11-19%20204056.png)
+![](https://fabricate.hackclub-assets.com/c4e7c1d5b149fb3255d2967c2cb118009b1da6130c105c3522dfffec4e2197a2/image-png/Screenshot%202026-11-19%20204105.png)
+
+**Total time spent: 2h**
