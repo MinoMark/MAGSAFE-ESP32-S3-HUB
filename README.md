@@ -24,7 +24,8 @@ The schematics of my final design, what I'll be using to make the main PCB.
 ## PCB
 The fully routed PCB, with fun easter egg and smart eletrical wiring choices that save money and change the path of electricity more efficiently.
 
-N/A
+![PCB Render](PCB/RENDERS/PCB1.png)
+![PCB Render](PCB/RENDERS/PCB2.png)
 
 ## CAD
 A full design of the parts (except some models impossible to source)
