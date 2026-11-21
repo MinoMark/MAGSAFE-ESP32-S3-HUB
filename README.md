@@ -13,7 +13,13 @@ Plug it into the dedicated USB-C port at the bottom side with a USB-C cable or a
 
 **Wiring Diagram:**
 
+The wiring diagram for POWER:
 
+![Power Diagran](Production/DIAGRAMS/Power1.png)
+
+The wiring diagram for AUDIO:
+
+![Audio Diagran](Production/DIAGRAMS/Audio1.png)
 
 ## Schematics
 The schematics of my final design, what I'll be using to make the main PCB.
