@@ -3,7 +3,7 @@ title: "Custom ESP32-S3 hub with MAGSAFE!"
 github: "https://github.com/MinoMark/MAGSAFE-ESP32-S3-HUB"
 description: "I'm using an ESP32-S3-WROOM-1-N16R8 with MAGSAFE to create a hub to control varius things around the house, or just a basic desk accessory, this project will have 1 speaker with an adapter from my custom pcb encasing to hold the amplifier and the speakers using simple Interfaces for the audio amplifier!\n\nA battery will be included as well, so there will be a 5v to 3.3v reduction circuirt (MAGSAFE causes this)."
 created_at: "2026-11-05"
-total_time: "17h 54m"
+total_time: "18h 18m"
 ---
 
 # November 5, 2026: Design the first schematic
@@ -142,3 +142,17 @@ As shown in the photos, it shows me making more and more changes to the PCB, add
 ![](https://fabricate.hackclub-assets.com/c4e7c1d5b149fb3255d2967c2cb118009b1da6130c105c3522dfffec4e2197a2/image-png/Screenshot%202026-11-19%20204105.png)
 
 **Total time spent: 2h**
+
+# November 21, 2026: Made the "Case"
+
+After designing the whole project in Fusion 360, I've now made the "Case". I quoted it like that because I've changed my mind about making a case. I want to make it show the hard work I put into designing and developing, so I've decided to just make a couple of clips to hold it together that will be 3D printed. Yes, I do have a 3D printer at home, so that will reduce cost. As well as that, having clips allows me to find any issues or to be able to show anyone.
+
+With Fusion 360, I learnt so much about the abilities of sketches. I now know that you can create a sketch on an existing part to fuse them together, which allowed me to work very efficiently when making the pins that hold it all together.
+
+As well as that, to hold the other loose stuff, I will be using either glue or some non-stick residue tape to bond everything together.
+
+![](https://fabricate.hackclub-assets.com/2d6becc1dbcd657d1a04e7a284d79201317cd00e25462649f7b436251dae746e/image-png/Screenshot%202026-11-21%20201124.png)
+![](https://fabricate.hackclub-assets.com/7e0d9581a45f029301d7e2782e33d8c42c52fa578e6641cdf44d13407290f45b/image-png/Screenshot%202026-11-21%20201130.png)
+![](https://fabricate.hackclub-assets.com/66b0db32f9c53109a338ea6b3586f3ce948c1261008ff546dd6583d47bc4ff80/image-png/Screenshot%202026-11-21%20201154.png)
+
+**Total time spent: 24m**
