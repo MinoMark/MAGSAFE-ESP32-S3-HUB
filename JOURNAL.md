@@ -3,7 +3,7 @@ title: "Custom ESP32-S3 hub with MAGSAFE!"
 github: "https://github.com/MinoMark/MAGSAFE-ESP32-S3-HUB"
 description: "I'm using an ESP32-S3-WROOM-1-N16R8 with MAGSAFE to create a hub to control varius things around the house, or just a basic desk accessory, this project will have 1 speaker with an adapter from my custom pcb encasing to hold the amplifier and the speakers using simple Interfaces for the audio amplifier!\n\nA battery will be included as well, so there will be a 5v to 3.3v reduction circuirt (MAGSAFE causes this)."
 created_at: "2026-11-05"
-total_time: "18h 18m"
+total_time: "18h 24m"
 ---
 
 # November 5, 2026: Design the first schematic
@@ -151,8 +151,12 @@ With Fusion 360, I learnt so much about the abilities of sketches. I now know th
 
 As well as that, to hold the other loose stuff, I will be using either glue or some non-stick residue tape to bond everything together.
 
+A little later, I made all the diagrams for wiring the modules together and put them on my GitHub.
+
 ![](https://fabricate.hackclub-assets.com/2d6becc1dbcd657d1a04e7a284d79201317cd00e25462649f7b436251dae746e/image-png/Screenshot%202026-11-21%20201124.png)
 ![](https://fabricate.hackclub-assets.com/7e0d9581a45f029301d7e2782e33d8c42c52fa578e6641cdf44d13407290f45b/image-png/Screenshot%202026-11-21%20201130.png)
 ![](https://fabricate.hackclub-assets.com/66b0db32f9c53109a338ea6b3586f3ce948c1261008ff546dd6583d47bc4ff80/image-png/Screenshot%202026-11-21%20201154.png)
+![](https://fabricate.hackclub-assets.com/31aa735200b1a85f5084bc3f4e92880cfa92a860253ec71b1520b07f0ecdb346/image-png/Audio1.png)
+![](https://fabricate.hackclub-assets.com/583fbf79f98497f77c7b4ff2f0c0f511db1347032e0e2965613a35d661d2a59b/image-png/Diagram.png)
 
-**Total time spent: 24m**
+**Total time spent: 30m**
