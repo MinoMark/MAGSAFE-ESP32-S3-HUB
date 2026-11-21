@@ -4,266 +4,206 @@
 #include <XPT2046_Touchscreen.h>
 #include <ESP_I2S.h>
 
-#define TFT_CS 10
-#define TFT_DC 9
-#define TFT_RST 14
-#define TFT_MOSI 11
-#define TFT_MISO 13
-#define TFT_SCK 12
-#define TOUCH_CS 8
+int tftCS = 10;
+int tftDC = 9;
+int tftReset = 14;
+int touchCS = 8;
 
-#define I2S_LRC 4
-#define I2S_BCLK 5
-#define I2S_DIN 6
-#define AMP_SD 17
+int ampLRC = 4;
+int ampBCLK = 5;
+int ampDIN = 6;
+int ampSD = 17;
 
-#define TOUCH_X_MIN 300
-#define TOUCH_X_MAX 3800
-#define TOUCH_Y_MIN 300
-#define TOUCH_Y_MAX 3800
+int xMin = 300;
+int xMax = 3800;
+int yMin = 300;
+int yMax = 3800;
 
-#define SCREEN_WIDTH 320
-#define SCREEN_HEIGHT 240
-#define SAMPLE_RATE 22050
-
-Adafruit_ILI9341 tft = Adafruit_ILI9341(&SPI, TFT_DC, TFT_CS, TFT_RST);
-XPT2046_Touchscreen ts(TOUCH_CS);
+Adafruit_ILI9341 tft = Adafruit_ILI9341(&SPI, tftDC, tftCS, tftReset);
+XPT2046_Touchscreen touch(touchCS);
 I2SClass i2s;
 
-int volumeLevel = 5;
-int16_t audioBuffer[256];
+int sampleRate = 22050;
+int vol = 5;
+int16_t sound[256];
 
-const int BEEP_X = 10;
-const int BEEP_Y = 85;
-const int BEEP_W = 145;
-const int BEEP_H = 65;
+int notes[] = {262, 262, 392, 392, 440, 440, 392, 349, 349, 330, 330, 294, 294, 262};
+int times[] = {300, 300, 300, 300, 300, 300, 600, 300, 300, 300, 300, 300, 300, 600};
 
-const int SONG_X = 165;
-const int SONG_Y = 85;
-const int SONG_W = 145;
-const int SONG_H = 65;
+void playNote(int freq, int ms) {
+  int samples = sampleRate / 100 * ms / 10;
+  int loudness = vol * 2000;
+  float angle = 0;
+  float step = 2 * PI * freq / sampleRate;
+  int pos = 0;
 
-const int VOLDOWN_X = 10;
-const int VOLDOWN_Y = 160;
-const int VOLDOWN_W = 95;
-const int VOLDOWN_H = 65;
+  for (int i = 0; i < samples; i++) {
+    int16_t value = loudness * sin(angle);
+    sound[pos] = value;
+    sound[pos + 1] = value;
+    pos += 2;
 
-const int VOLBOX_X = 115;
-const int VOLBOX_Y = 160;
-const int VOLBOX_W = 90;
-const int VOLBOX_H = 65;
-
-const int VOLUP_X = 215;
-const int VOLUP_Y = 160;
-const int VOLUP_W = 95;
-const int VOLUP_H = 65;
-
-int melodyNotes[] = {262, 262, 392, 392, 440, 440, 392, 349, 349, 330, 330, 294, 294, 262};
-int melodyLengths[] = {300, 300, 300, 300, 300, 300, 600, 300, 300, 300, 300, 300, 300, 600};
-int melodyCount = 14;
-
-void playTone(int frequency, int durationMs) {
-  int totalSamples = (SAMPLE_RATE / 100) * durationMs / 10;
-  int amplitude = volumeLevel * 2000;
-  float angle = 0.0;
-  float angleStep = 2.0 * PI * frequency / SAMPLE_RATE;
-  int index = 0;
-
-  for (int i = 0; i < totalSamples; i++) {
-    int16_t sample = (int16_t)(amplitude * sin(angle));
-    audioBuffer[index] = sample;
-    audioBuffer[index + 1] = sample;
-    index = index + 2;
-
-    angle = angle + angleStep;
-    if (angle >= 2.0 * PI) {
-      angle = angle - 2.0 * PI;
+    angle += step;
+    if (angle > 2 * PI) {
+      angle -= 2 * PI;
     }
 
-    if (index >= 256) {
-      i2s.write((uint8_t *)audioBuffer, sizeof(audioBuffer));
-      index = 0;
+    if (pos == 256) {
+      i2s.write((uint8_t*)sound, sizeof(sound));
+      pos = 0;
     }
   }
 
-  if (index > 0) {
-    i2s.write((uint8_t *)audioBuffer, index * sizeof(int16_t));
+  if (pos > 0) {
+    i2s.write((uint8_t*)sound, pos * 2);
   }
 }
 
-void playBeep() {
-  playTone(1000, 200);
-  playTone(0, 30);
+void beep() {
+  playNote(1000, 200);
+  playNote(0, 30);
 }
 
-void playClick() {
-  playTone(1500, 40);
-  playTone(0, 20);
+void click() {
+  playNote(1500, 40);
+  playNote(0, 20);
 }
 
-void playSong() {
-  for (int i = 0; i < melodyCount; i++) {
-    playTone(melodyNotes[i], melodyLengths[i]);
-    playTone(0, 50);
+void song() {
+  for (int i = 0; i < 14; i++) {
+    playNote(notes[i], times[i]);
+    playNote(0, 50);
   }
-  playTone(0, 30);
 }
 
-void drawButton(int x, int y, int w, int h, String label, uint16_t color) {
-  tft.fillRoundRect(x, y, w, h, 10, color);
+void button(int x, int y, int w, int h, String text, uint16_t colour) {
+  tft.fillRoundRect(x, y, w, h, 10, colour);
   tft.drawRoundRect(x, y, w, h, 10, ILI9341_WHITE);
   tft.setTextSize(2);
   tft.setTextColor(ILI9341_WHITE);
-  int textWidth = label.length() * 12;
-  int textX = x + (w - textWidth) / 2;
-  int textY = y + (h - 16) / 2;
-  tft.setCursor(textX, textY);
-  tft.print(label);
-}
-
-void drawVolume() {
-  tft.fillRoundRect(VOLBOX_X, VOLBOX_Y, VOLBOX_W, VOLBOX_H, 10, ILI9341_DARKGREY);
-  tft.setTextSize(2);
-  tft.setTextColor(ILI9341_WHITE);
-  String text = "Vol " + String(volumeLevel);
-  int textWidth = text.length() * 12;
-  int textX = VOLBOX_X + (VOLBOX_W - textWidth) / 2;
-  int textY = VOLBOX_Y + (VOLBOX_H - 16) / 2;
-  tft.setCursor(textX, textY);
+  tft.setCursor(x + (w - text.length() * 12) / 2, y + (h - 16) / 2);
   tft.print(text);
 }
 
-void showStatus(String message) {
-  tft.fillRect(0, 45, SCREEN_WIDTH, 30, ILI9341_BLACK);
+void showVolume() {
+  button(115, 160, 90, 65, "Vol " + String(vol), ILI9341_DARKGREY);
+}
+
+void message(String text) {
+  tft.fillRect(0, 45, 320, 30, ILI9341_BLACK);
   tft.setTextSize(2);
   tft.setTextColor(ILI9341_YELLOW);
   tft.setCursor(10, 52);
-  tft.print(message);
+  tft.print(text);
 }
 
 void drawScreen() {
   tft.fillScreen(ILI9341_BLACK);
-
-  tft.fillRect(0, 0, SCREEN_WIDTH, 40, ILI9341_NAVY);
+  tft.fillRect(0, 0, 320, 40, ILI9341_NAVY);
   tft.setTextSize(2);
   tft.setTextColor(ILI9341_WHITE);
   tft.setCursor(10, 12);
   tft.print("ESP32-S3 Sound Demo");
 
-  drawButton(BEEP_X, BEEP_Y, BEEP_W, BEEP_H, "Beep", ILI9341_BLUE);
-  drawButton(SONG_X, SONG_Y, SONG_W, SONG_H, "Play Song", ILI9341_DARKGREEN);
-  drawButton(VOLDOWN_X, VOLDOWN_Y, VOLDOWN_W, VOLDOWN_H, "Vol -", ILI9341_MAROON);
-  drawButton(VOLUP_X, VOLUP_Y, VOLUP_W, VOLUP_H, "Vol +", ILI9341_MAROON);
-  drawVolume();
+  button(10, 85, 145, 65, "Beep", ILI9341_BLUE);
+  button(165, 85, 145, 65, "Play Song", ILI9341_DARKGREEN);
+  button(10, 160, 95, 65, "Vol -", ILI9341_MAROON);
+  button(215, 160, 95, 65, "Vol +", ILI9341_MAROON);
+  showVolume();
 
-  showStatus("Touch a button");
-}
-
-bool isInside(int touchX, int touchY, int x, int y, int w, int h) {
-  if (touchX >= x && touchX <= x + w && touchY >= y && touchY <= y + h) {
-    return true;
-  }
-  return false;
-}
-
-void handleTouch(int touchX, int touchY) {
-  if (isInside(touchX, touchY, BEEP_X, BEEP_Y, BEEP_W, BEEP_H)) {
-    drawButton(BEEP_X, BEEP_Y, BEEP_W, BEEP_H, "Beep", ILI9341_ORANGE);
-    showStatus("Beep!");
-    playBeep();
-    drawButton(BEEP_X, BEEP_Y, BEEP_W, BEEP_H, "Beep", ILI9341_BLUE);
-  }
-  else if (isInside(touchX, touchY, SONG_X, SONG_Y, SONG_W, SONG_H)) {
-    drawButton(SONG_X, SONG_Y, SONG_W, SONG_H, "Play Song", ILI9341_ORANGE);
-    showStatus("Playing song...");
-    playSong();
-    drawButton(SONG_X, SONG_Y, SONG_W, SONG_H, "Play Song", ILI9341_DARKGREEN);
-    showStatus("Song finished");
-  }
-  else if (isInside(touchX, touchY, VOLDOWN_X, VOLDOWN_Y, VOLDOWN_W, VOLDOWN_H)) {
-    drawButton(VOLDOWN_X, VOLDOWN_Y, VOLDOWN_W, VOLDOWN_H, "Vol -", ILI9341_ORANGE);
-    if (volumeLevel > 0) {
-      volumeLevel = volumeLevel - 1;
-    }
-    drawVolume();
-    showStatus("Volume down");
-    playClick();
-    drawButton(VOLDOWN_X, VOLDOWN_Y, VOLDOWN_W, VOLDOWN_H, "Vol -", ILI9341_MAROON);
-  }
-  else if (isInside(touchX, touchY, VOLUP_X, VOLUP_Y, VOLUP_W, VOLUP_H)) {
-    drawButton(VOLUP_X, VOLUP_Y, VOLUP_W, VOLUP_H, "Vol +", ILI9341_ORANGE);
-    if (volumeLevel < 10) {
-      volumeLevel = volumeLevel + 1;
-    }
-    drawVolume();
-    showStatus("Volume up");
-    playClick();
-    drawButton(VOLUP_X, VOLUP_Y, VOLUP_W, VOLUP_H, "Vol +", ILI9341_MAROON);
-  }
-  else {
-    showStatus("Tap X:" + String(touchX) + " Y:" + String(touchY));
-  }
+  message("Touch a button");
 }
 
 void setup() {
   Serial.begin(115200);
   delay(500);
-  Serial.println("Starting...");
 
-  pinMode(TOUCH_CS, OUTPUT);
-  digitalWrite(TOUCH_CS, HIGH);
-  pinMode(TFT_CS, OUTPUT);
-  digitalWrite(TFT_CS, HIGH);
+  pinMode(touchCS, OUTPUT);
+  digitalWrite(touchCS, HIGH);
+  pinMode(tftCS, OUTPUT);
+  digitalWrite(tftCS, HIGH);
+  pinMode(ampSD, OUTPUT);
+  digitalWrite(ampSD, HIGH);
 
-  pinMode(AMP_SD, OUTPUT);
-  digitalWrite(AMP_SD, HIGH);
-
-  SPI.begin(TFT_SCK, TFT_MISO, TFT_MOSI);
+  SPI.begin(12, 13, 11);
 
   tft.begin();
   tft.setRotation(1);
 
-  ts.begin(SPI);
-  ts.setRotation(1);
+  touch.begin(SPI);
+  touch.setRotation(1);
 
-  i2s.setPins(I2S_BCLK, I2S_LRC, I2S_DIN);
-  if (!i2s.begin(I2S_MODE_STD, SAMPLE_RATE, I2S_DATA_BIT_WIDTH_16BIT, I2S_SLOT_MODE_STEREO)) {
-    Serial.println("I2S audio failed to start");
+  i2s.setPins(ampBCLK, ampLRC, ampDIN);
+  if (i2s.begin(I2S_MODE_STD, sampleRate, I2S_DATA_BIT_WIDTH_16BIT, I2S_SLOT_MODE_STEREO)) {
+    Serial.println("Audio OK");
   } else {
-    Serial.println("I2S audio started");
+    Serial.println("Audio not working");
   }
 
   drawScreen();
 
-  playTone(880, 100);
-  playTone(0, 50);
-  playTone(1320, 150);
-  playTone(0, 30);
-
-  Serial.println("Ready");
+  playNote(880, 100);
+  playNote(0, 50);
+  playNote(1320, 150);
+  playNote(0, 30);
 }
 
 void loop() {
-  if (ts.touched()) {
-    TS_Point p = ts.getPoint();
+  if (touch.touched()) {
+    TS_Point p = touch.getPoint();
 
-    int touchX = map(p.x, TOUCH_X_MIN, TOUCH_X_MAX, 0, SCREEN_WIDTH - 1);
-    int touchY = map(p.y, TOUCH_Y_MIN, TOUCH_Y_MAX, 0, SCREEN_HEIGHT - 1);
-    touchX = constrain(touchX, 0, SCREEN_WIDTH - 1);
-    touchY = constrain(touchY, 0, SCREEN_HEIGHT - 1);
+    int x = map(p.x, xMin, xMax, 0, 319);
+    int y = map(p.y, yMin, yMax, 0, 239);
+    x = constrain(x, 0, 319);
+    y = constrain(y, 0, 239);
 
-    Serial.print("Raw X: ");
+    Serial.print("raw: ");
     Serial.print(p.x);
-    Serial.print("  Raw Y: ");
+    Serial.print(", ");
     Serial.print(p.y);
-    Serial.print("  Screen X: ");
-    Serial.print(touchX);
-    Serial.print("  Screen Y: ");
-    Serial.println(touchY);
+    Serial.print("   screen: ");
+    Serial.print(x);
+    Serial.print(", ");
+    Serial.println(y);
 
-    handleTouch(touchX, touchY);
+    if (x > 10 && x < 155 && y > 85 && y < 150) {
+      button(10, 85, 145, 65, "Beep", ILI9341_ORANGE);
+      message("Beep!");
+      beep();
+      button(10, 85, 145, 65, "Beep", ILI9341_BLUE);
+    }
+    else if (x > 165 && x < 310 && y > 85 && y < 150) {
+      button(165, 85, 145, 65, "Play Song", ILI9341_ORANGE);
+      message("Playing song...");
+      song();
+      button(165, 85, 145, 65, "Play Song", ILI9341_DARKGREEN);
+      message("Song finished");
+    }
+    else if (x > 10 && x < 105 && y > 160 && y < 225) {
+      button(10, 160, 95, 65, "Vol -", ILI9341_ORANGE);
+      if (vol > 0) {
+        vol--;
+      }
+      showVolume();
+      message("Volume down");
+      click();
+      button(10, 160, 95, 65, "Vol -", ILI9341_MAROON);
+    }
+    else if (x > 215 && x < 310 && y > 160 && y < 225) {
+      button(215, 160, 95, 65, "Vol +", ILI9341_ORANGE);
+      if (vol < 10) {
+        vol++;
+      }
+      showVolume();
+      message("Volume up");
+      click();
+      button(215, 160, 95, 65, "Vol +", ILI9341_MAROON);
+    }
+    else {
+      message("Tap X:" + String(x) + " Y:" + String(y));
+    }
 
-    while (ts.touched()) {
+    while (touch.touched()) {
       delay(10);
     }
   }
