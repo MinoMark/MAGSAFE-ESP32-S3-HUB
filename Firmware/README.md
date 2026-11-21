@@ -1,8 +1,4 @@
 
-# Firmware in Progress
+# About Firmware
 
-I actually need the whole project before I am done. I cannot make it without it despite saying I can post it here before actually having tested it.
-
-**Why?**
-
-You may ask why. Well the reason is because the audio amplifier works in a very specific way where it needs its own code to run and sequence on a different file. I need to be sure this works before adding the rest otherwise the whole project could be over.
+This took me a while to learn. I've used about 30% AI to help me make the code. I've also used it at the end after coding to clean the rest and make it more efficed. Ofcourse I tried doing it my self hen got AI to finsih it off. I used it to onl help me with this and NOT do it for me.
